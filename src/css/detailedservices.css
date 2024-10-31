@@ -1,0 +1,52 @@
+/* Banner Styles */
+.banner {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    background-image: url('your-banner-image-url.jpg'); /* Replace with your banner image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  
+  /* Overlay effect for the banner */
+  .banner-overlay {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    text-align: center;
+  
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  
+  /* Text Styles */
+  .banner-heading {
+    font-size: 3rem;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .breadcrumbs {
+    margin-top: 10px;
+    font-size: 1rem;
+    z-index: 2;
+    position: relative;
+  }
+  

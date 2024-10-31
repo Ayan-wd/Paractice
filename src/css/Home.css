@@ -1,0 +1,123 @@
+
+.homepage-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding-top: 160px; 
+}
+
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: antiquewhite !important;
+}
+
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#about-btn, #contact-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100px; 
+  text-align: center;
+}
+
+
+#about-btn {
+  background-color: #357446;
+}
+
+/* #about-btn:hover {
+  background-color: #025843;
+} */
+
+#contact-btn {
+  background-color: transparent;
+  border: 2px solid #357446;
+}
+
+/* #contact-btn:hover {
+  background-color: #025843;
+} */
+
+
+@media (max-width: 576px) {
+  .heading {
+    font-size: 2rem; 
+  }
+  
+  .subtext {
+    font-size: 1.25rem; 
+  }
+
+  #about-btn, #contact-btn {
+    width: 150px; 
+    font-size: 0.9rem; 
+  }
+}
+
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .subtext {
+    font-size: 1.4rem; 
+  }
+
+  #about-btn, #contact-btn {
+    width: 180px;
+  }
+}
+
+@media (min-width: 992px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .subtext {
+    font-size: 1.5rem; 
+  }
+
+  #about-btn, #contact-btn {
+    width: 200px; 
+  }
+}

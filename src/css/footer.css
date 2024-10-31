@@ -1,0 +1,23 @@
+footer {
+  background-color: #357446 ; 
+  color: white;
+}
+
+footer a {
+  color: #ffffff; 
+}
+
+footer a:hover {
+  color: #adb5bd;
+}
+.footer-text,.footer-contact {
+  color: white ;
+  line-height: 1.6;
+}
+.footer-contact{
+  color: white !important ;
+  line-height: 1.6;
+}
+.contact-link{
+  color: white;
+}

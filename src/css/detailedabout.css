@@ -1,0 +1,50 @@
+.banner {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
+  color: white;
+  padding: 150px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; 
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+.banner-heading,
+.breadcrumbs {
+  position: relative;
+  z-index: 2; /* Ensure the text appears above the overlay */
+
+}
+
+ 
+
+  /* Content Image Styling */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* General Content Styling */
+h2 {
+  color: #025843;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #333;
+  line-height: 1.6;
+}
