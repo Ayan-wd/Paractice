@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/navlogo/logo.png";
-
 import "../css/Nav.css";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleClick = () => {
     navigate("/contact");
   };
 
-  const isActive = (path) => location.pathname === path; 
+  const isActive = (path) => location.pathname === path;
 
   const handleNavLinkClick = () => {
     const navbarCollapse = document.getElementById("navbarSupportedContent");
@@ -22,18 +31,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav
+      className={`navbar navbar-expand-lg ${isScrolled ? "scrolled" : "transparent"}`}
+    >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <img
-            src={logo}
-            alt="Logo"
-            className="navbar-logo"
-            height={80}
-            width={140}
-          />
+          <img src={logo} alt="Logo" className="navbar-logo" height={90} width={110} />
         </Link>
-
         <button
           className="navbar-toggler"
           type="button"
@@ -45,9 +49,8 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="custom-navbar-nav">
+          <ul className="custom-navbar-nav me-auto">
             <li className="nav-item">
               <Link
                 className={`nav-link ${isActive("/") ? "active" : ""}`}
@@ -75,16 +78,6 @@ const Navbar = () => {
                 Faculty
               </Link>
             </li>
-      
-            <li className="nav-item">
-              <Link
-                className={`nav-link ${isActive("/founder") ? "active" : ""}`}
-                to="/founder"
-                onClick={handleNavLinkClick}
-              >
-                Founder
-              </Link>
-            </li>
             <li className="nav-item">
               <Link
                 className={`nav-link ${isActive("/detailedAbout") ? "active" : ""}`}
@@ -105,27 +98,15 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <button
-                style={{
-                  backgroundColor: "#025843",
-                  borderColor: "#025843",
-                  transition: "background-color 0.3s, transform 0.3s",
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.backgroundColor = "#025843";
-                  e.currentTarget.style.transform = "scale(1.05)";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.backgroundColor = "#025843";
-                  e.currentTarget.style.transform = "scale(1)";
-                }}
-            type="button"
-            id="nav-button"
-            className="btn btn-primary appointment-btn"
-            onClick={handleClick}
-          >
-            <strong>Appointment</strong> <i className="bi bi-arrow-right"></i>
-          </button>
+          {/* Signup/Login buttons */}
+          <div className="d-flex">
+            <Link to="/signupForm" className="btn btn-outline-success mx-2" style={{ minWidth: "100px" }}>
+              Sign Up
+            </Link>
+            <Link to="/login" className="btn btn-success" style={{ minWidth: "100px" }}>
+              Login
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

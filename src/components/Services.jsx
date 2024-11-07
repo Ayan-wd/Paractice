@@ -1,74 +1,91 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import services from '../assets/services/services.jpg'
 
 const Services = () => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/services');
   };
-  return (
-    <div
-      className="container"
-      style={{  marginTop: '100px' }}
-    >
-      <div className="row align-items-center">
-       
-        <h1 style={{ fontWeight: "bold", marginBottom: "3rem",textAlign:'center',alignItems:'center' }}>Services</h1>
-        <div
-          className="col-md-6"
-          style={{ padding: '20px', wordWrap: 'break-word' }}
-        >
-          <p className='services-text'>
-          Our platform offers a comprehensive and innovative learning experience. We combine traditional teaching methods, which provide a solid foundation and time-tested structure, with the latest educational techniques, including interactive tools, multimedia content, and personalized learning paths. This blend ensures that students of all ages and backgrounds can engage with the material in a way that suits their individual learning style, helping them to grasp complex concepts more effectively and achieve their goals. Whether you prefer classic approaches or the newest in educational technology, our services are designed to make learning accessible, engaging, and impactful for everyone. 
-          </p>
-      
-          <p className='btn-services'>For More Information:</p>
-           <button
-            
-              style={{
-                backgroundColor: '#007bff',
-                borderColor: '#007bff',
-                transition: 'background-color 0.3s, transform 0.3s',
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor = '#0056b3';
-                e.currentTarget.style.transform = 'scale(1.05)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor = '#007bff';
-                e.currentTarget.style.transform = 'scale(1)';
-              }}
-            type="button"
-            id="nav-button"
-            className="btn btn-primary appointment-btn"
-            onClick={handleClick}
-            
-          >
-         <strong> Learn More</strong> <i className="bi bi-arrow-right"></i>
-          </button>
-        </div>
 
-   
-        <div
-          className="col-md-6 d-flex align-items-center justify-content-center"
-          style={{ height: '70%' }}
-        >
-          <img
-             src={services}
-            alt="Environment"
-            style={{
-              maxWidth: '100%',
-              height: 'auto',
-              borderRadius: '10px',
-            }}
-          />
+  return (
+    <>
+      <section className="bsb-service-6 py-5 py-xl-8">
+        <div className="container">
+          <div className="row justify-content-md-center">
+            <div className="col-12 col-md-10 col-lg-8 col-xl-7">
+              <h3 className="fs-6 mb-2 text-secondary text-center text-uppercase">
+                What We Offer
+              </h3>
+              <h2 className="display-5 mb-4 mb-md-5 text-center text-dark">
+                Empowering Students with Comprehensive Mathematics Support
+              </h2>
+              <hr className="w-50 mx-auto mb-4 mb-xl-9 border-dark-subtle" />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="container my-4">
-          <hr style={{ border: "1px solid black" }} />
+        <div className="container overflow-hidden">
+          <div className="row gy-4 gy-md-0 gx-xxl-5">
+            <div className="col-12 col-md-4">
+              <div className="card bg-transparent border-success rounded-0">
+                <div className="card-body">
+                  <i className="fas fa-chalkboard-teacher text-success mb-4" style={{ fontSize: '32px' }}></i>
+                  <h3 className="h2 mb-4">Online All Subject Classes</h3>
+                  <p className="mb-4 text-secondary">
+                    Our interactive online math classes are designed to help students build a strong foundation in mathematics, covering topics from basic arithmetic to advanced calculus.
+                  </p>
+                  <a
+                    href="#!"
+                    className="fw-bold text-decoration-none link-success"
+                    onClick={handleClick}
+                  >
+                    Learn More
+                    <i className="fas fa-arrow-right" style={{ marginLeft: '5px' }}></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-4">
+              <div className="card bg-transparent border-success rounded-0">
+                <div className="card-body">
+                  <i className="fas fa-chart-line text-success mb-4" style={{ fontSize: '32px' }}></i>
+                  <h3 className="h2 mb-4">Assessment & Progress Tracking</h3>
+                  <p className="mb-4 text-secondary">
+                    We provide regular assessments to track student progress, identify areas for improvement, and personalize learning strategies for maximum success.
+                  </p>
+                  <a
+                    href="#!"
+                    className="fw-bold text-decoration-none link-success"
+                    onClick={handleClick}
+                  >
+                    Learn More
+                    <i className="fas fa-arrow-right" style={{ marginLeft: '5px' }}></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-4">
+              <div className="card bg-transparent border-success rounded-0">
+                <div className="card-body">
+                  <i className="fas fa-medal text-success mb-4" style={{ fontSize: '32px' }}></i>
+                  <h3 className="h2 mb-4">Competitive Exam Preparation</h3>
+                  <p className="mb-4 text-secondary">
+                    Our specialized tutoring helps students prepare for competitive exams, from standardized tests to math olympiads, with expert guidance and structured practice.
+                  </p>
+                  <a
+                    href="#!"
+                    className="fw-bold text-decoration-none link-success"
+                    onClick={handleClick}
+                  >
+                    Learn More
+                    <i className="fas fa-arrow-right" style={{ marginLeft: '5px' }}></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
+    </>
   );
 };
 

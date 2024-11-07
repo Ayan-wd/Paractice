@@ -1,151 +1,119 @@
-import React from "react";
-import "../css/forms.css";
+import React, { useState } from "react";
+import Bgservices from "/src/assets/detailedfaculty/Bgservices.avif";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+ 
+    console.log("Form submitted:", formData);
+   
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
+
   return (
-    <div
-      className="form-container"
-      style={{ backgroundColor: "black", padding: "40px",marginTop:'100px' }}
-    >
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-6 col-md-8 col-sm-10">
-            <div className="top">
-              <h1 className="form-title" style={{ color: "white" }}>
-               <strong> Join the Team</strong>
-              </h1>
-              {/* <p className="form-text" style={{ color: "white" }}>
-                The House of Mentors is located in the historical „Villa Bonn“,
-                in the heart of Frankfurt.
-              </p> */}
-              {/* <p className="form-text" style={{ color: "white" }}>
-                Here the annual award ceremonies of the „World Student
-                Challenge“ take place, to which we cordially invite all our
-                mentors. Please contact us and become a mentor.
-              </p> */}
-            </div>
-            <div className="form-body">
-              <div className="form-holder">
-                <div className="form-content">
-                  <div className="form-items">
-                    <h3 className="form-subtitle">Register Today</h3>
-                    <p className="form-subtext">Fill in the data below.</p>
-                    <form className="requires-validation" noValidate>
-                      <div className="mb-3">
-                        <input
-                          className="form-control"
-                          type="text"
-                          name="name"
-                          placeholder="Full Name"
-                          required
-                        />
-                      </div>
-
-                      <div className="mb-3">
-                        <input
-                          className="form-control"
-                          type="email"
-                          name="email"
-                          placeholder="E-mail Address"
-                          required
-                        />
-                      </div>
-
-                      <div className="mb-3">
-                        <select className="form-select" required>
-                          <option selected disabled value="">
-                            Position
-                          </option>
-                          <option value="jweb">Junior Web Developer</option>
-                          <option value="sweb">Senior Web Developer</option>
-                          <option value="pmanager">Project Manager</option>
-                        </select>
-                      </div>
-
-                      <div className="mb-3">
-                        <input
-                          className="form-control"
-                          type="password"
-                          name="password"
-                          placeholder="Password"
-                          required
-                        />
-                      </div>
-
-                      <div className="mb-3">
-                        <label className="form-label">Gender:</label>
-                        <div className="d-flex justify-content-start">
-                          <input
-                            type="radio"
-                            className="btn-check"
-                            name="gender"
-                            id="male"
-                            autoComplete="off"
-                            required
-                          />
-                          <label
-                            className="btn btn-outline-secondary me-2"
-                            htmlFor="male"
-                          >
-                            Male
-                          </label>
-
-                          <input
-                            type="radio"
-                            className="btn-check"
-                            name="gender"
-                            id="female"
-                            autoComplete="off"
-                            required
-                          />
-                          <label
-                            className="btn btn-outline-secondary me-2"
-                            htmlFor="female"
-                          >
-                            Female
-                          </label>
-                        </div>
-                      </div>
-
-                      <div className="form-check mb-3">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          id="invalidCheck"
-                          required
-                        />
-                        <label className="form-check-label">
-                          I confirm that all data are correct
-                        </label>
-                      </div>
-
-                      <div className="form-button mt-3">
-                        <button
-                          className="btn btn-primary mb-2 me-2"
-                          id="submit"
-                          type="submit"
-                        >
-                          Register
-                        </button>
-                        <button
-                          className="btn btn-primary mb-2"
-                          id="submit-mentoring"
-                          type="submit"
-                        >
-                          Send Request for Mentoring
-                        </button>
-                      </div>
-                      {/* <p className="form-info">
-                        Please complete and sign the form. Return it by mail or
-                        e-mail to: m.weiss@haus-der-mentoren.de
-                      </p> */}
-                    </form>
-                  </div>
-                </div>
-              </div>
+    <div>
+   
+      <div className="container-fluid p-0">
+        <div
+          className="banner"
+          style={{
+            backgroundImage: `url(${Bgservices})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            color: "white",
+            position: "relative",
+            height: "500px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div className="banner-overlay">
+            <h1 className="banner-heading">Contact Us</h1>
+            <div className="breadcrumbs">
+              <a style={{ color: "white", textDecoration: "none" }} href="/">
+                Home
+              </a>{" "}
+              <i className="bi bi-chevron-right"></i> <span>Contact Us</span>
             </div>
           </div>
         </div>
+      </div>
+
+    
+      <div className="container mt-5">
+        <h2 className="text-center text-dark mb-4">Get in Touch</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-md-6 mb-3">
+              <label htmlFor="name" className="form-label">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="form-control"
+              />
+            </div>
+            <div className="col-md-6 mb-3">
+              <label htmlFor="email" className="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="form-control"
+              />
+            </div>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="subject" className="form-label">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="message" className="form-label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="form-control"
+              rows="5"
+            ></textarea>
+          </div>
+          <button type="submit" className="btn btn-success mb-4">Send Message</button>
+        </form>
       </div>
     </div>
   );

@@ -9,12 +9,13 @@ import Services from "./components/Services";
 import Support from "./components/Support";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Founder from "./components/Founder";
+// import Founder from "./components/Founder";
 import DetailedServices from "./components/DetailedPages/DetailedServices";
 import DetailedFaculty from "./components/DetailedPages/DetailedFaculty";
 import Preloader from "./components/preloader";
-import DetailedAbout from "./components/DetailedPages/DetailedABout";
-
+import DetailedAbout from "./components/DetailedPages/DetailedAbout";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
 
 const router = createBrowserRouter([
   {
@@ -71,16 +72,16 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  {
-    path: "/founder",
-    element: (
-      <>
-        <Navbar />
-        <Founder />
-        <Footer />
-      </>
-    ),
-  },
+  // {
+  //   path: "/founder",
+  //   element: (
+  //     <>
+  //       <Navbar />
+  //       <Founder />
+  //       <Footer />
+  //     </>
+  //   ),
+  // },
   {
     path: "/about",
     element: (
@@ -97,6 +98,26 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <DetailedAbout />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/signupForm",
+    element: (
+      <>
+        <Navbar />
+        <Signup />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/Login",
+    element: (
+      <>
+        <Navbar />
+        <Login/>
         <Footer />
       </>
     ),

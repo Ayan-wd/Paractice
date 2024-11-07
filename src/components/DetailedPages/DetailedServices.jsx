@@ -12,8 +12,7 @@ const DetailedServices = () => {
   };
 
   return (
-    <div style={{ marginTop: "105px" }}>
-      {/* Full-width Banner Section */}
+    <>
       <div className="container-fluid p-0">
         <div
           className="banner"
@@ -24,139 +23,94 @@ const DetailedServices = () => {
             backgroundRepeat: "no-repeat",
             color: "white",
             position: "relative",
-            height: "50vh",
+            height: "500px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <div className="banner-overlay text-center">
+          <div className="banner-overlay">
             <h1 className="banner-heading">Our Services</h1>
             <div className="breadcrumbs">
-              <a
-                style={{ color: "white", textDecoration: "none" }}
-                href="/"
-              >
+              <a style={{ color: "white", textDecoration: "none" }} href="/">
                 Home
               </a>{" "}
-              <i className="bi bi-chevron-right"></i> <span>Our Services</span>
+              <i className="bi bi-chevron-right"></i> <span>Services</span>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Header Section */}
-      <div className="container mt-5">
-        <div className="row align-items-center mb-5">
-          <div className="col-12">
-            <h1 className="text-center text-md-start">
-              <strong>Services</strong>
-            </h1>
-            <p style={{ color: "black", lineHeight: "1.6" }}>
-              At House of Mathematics, we are dedicated to fostering a deep
-              understanding and love for mathematics. Our expert tutors provide
-              personalized coaching for students of all levels—from foundational
-              concepts to advanced topics.
-            </p>
-          </div>
-        </div>
-
-        {/* Cards Section */}
-        <div className="row gy-4">
-          {/* Card 1 */}
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="card h-100" style={{ border: "none" }}>
-              <img
-                src={maths}
-                className="card-img-top img-fluid"
-                alt="Mathematics"
-                style={{ height: "250px", objectFit: "cover" }}
-              />
-              <div className="card-body">
-                <h5 className="card-title">O/A Levels Course</h5>
-                <p className="card-text">
-                  Detailed video lectures for O/A Levels Students.
-                </p>
-                <a
-                  href="#"
-                  className="btn btn-primary"
-                  style={{ backgroundColor: "#025843" }}
-                >
-                  Get Course
-                </a>
+      {/* Service Section */}
+      <section className="bg-light py-3 py-md-5 py-xl-8 ">
+        <div className="container overflow-hidden">
+          <div className="row gy-4 gy-md-5 gy-lg-0 align-items-center">
+            <div className="col-12 col-lg-5">
+              <div className="row">
+                <div className="col-12 col-xl-11">
+                  <h3 className="fs-6 text-secondary mb-3 mb-xl-4 text-uppercase">
+                    What We Offer?
+                  </h3>
+                  <h2 className="display-5 text-dark mb-3 mb-xl-4">
+                    Unlock Your Potential with Our Educational Services
+                  </h2>
+                  <p className="mb-3 mb-xl-4">
+                    Our comprehensive range of educational services is designed to help learners of all ages thrive. From personalized tutoring to innovative online courses, we are here to support your learning journey and empower you to achieve your goals.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="card h-100" style={{ border: "none" }}>
-              <img
-                src={maths}
-                className="card-img-top img-fluid"
-                alt="Mathematics"
-                style={{ height: "250px", objectFit: "cover" }}
-              />
-              <div className="card-body">
-                <h5 className="card-title">Advanced Math Course</h5>
-                <p className="card-text">
-                  Master advanced mathematical concepts with ease.
-                </p>
-                <a
-                  href="#"
-                  className="btn btn-primary"
-                  style={{ backgroundColor: "#025843" }}
-                >
-                  Get Course
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="card h-100" style={{ border: "none" }}>
-              <img
-                src={maths}
-                className="card-img-top img-fluid"
-                alt="Mathematics"
-                style={{ height: "250px", objectFit: "cover" }}
-              />
-              <div className="card-body">
-                <h5 className="card-title">Test Prep Course</h5>
-                <p className="card-text">
-                  Prepare for tests with our expert-guided practice.
-                </p>
-                <a
-                  href="#"
-                  className="btn btn-primary"
-                  style={{ backgroundColor: "#025843" }}
-                >
-                  Get Course
-                </a>
+            <div className="col-12 col-lg-7 overflow-hidden">
+              <div className="row gy-4">
+                <div className="col-12 col-sm-6">
+                  <div className="card border-0 border-bottom border-success shadow-sm">
+                    <div className="card-body text-center p-4 p-xxl-5">
+                      <i className="bi bi-person-check text-success mb-4" style={{ fontSize: '56px' }}></i>
+                      <h4 className="mb-4">Personalized Tutoring</h4>
+                      <p className="mb-4 text-secondary">
+                        Our experienced tutors offer personalized support to help you understand challenging subjects and improve your grades.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-12 col-sm-6">
+                  <div className="card border-0 border-bottom border-success shadow-sm">
+                    <div className="card-body text-center p-4 p-xxl-5">
+                      <i className="bi bi-book text-success mb-4" style={{ fontSize: '56px' }}></i>
+                      <h4 className="mb-4">Online Courses</h4>
+                      <p className="mb-4 text-secondary">
+                        We provide a variety of online courses that cater to different learning styles, making education accessible to everyone.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-12 col-sm-6">
+                  <div className="card border-0 border-bottom border-success shadow-sm">
+                    <div className="card-body text-center p-4 p-xxl-5">
+                      <i className="bi bi-calendar-event text-success mb-4" style={{ fontSize: '56px' }}></i>
+                      <h4 className="mb-4">Flexible Scheduling</h4>
+                      <p className="mb-4 text-secondary">
+                        We offer flexible scheduling options to fit your busy lifestyle, allowing you to learn at your own pace and convenience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-12 col-sm-6">
+                  <div className="card border-0 border-bottom border-success shadow-sm">
+                    <div className="card-body text-center p-4 p-xxl-5">
+                      <i className="bi bi-headset text-success mb-4" style={{ fontSize: '56px' }}></i>
+                      <h4 className="mb-4">24/7 Support</h4>
+                      <p className="mb-4 text-secondary">
+                        Our dedicated support team is available 24/7 to assist you with any questions or concerns you may have during your learning experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Divider */}
-        <div className="container my-4">
-          <hr style={{ border: "1px solid black" }} />
-        </div>
-
-        {/* Return Button */}
-        <div className="text-center mb-5">
-          <button
-            onClick={handleReturn}
-            style={{ backgroundColor: "#025843" }}
-            type="button"
-            className="btn btn-primary"
-          >
-            Return Back
-          </button>
-        </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 

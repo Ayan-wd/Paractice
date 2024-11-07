@@ -1,0 +1,72 @@
+.banner-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  }
+  
+  .banner-heading {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .breadcrumbs {
+    font-size: 1rem;
+  }
+  
+  .breadcrumb-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .faculty-description {
+    color: black;
+    line-height: 1.6;
+  }
+  
+  .professor-img {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .professor-img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+  
+  .professor-name {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .professor-role {
+    color: gray;
+    font-style: italic;
+  }
+  
+
+  

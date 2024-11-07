@@ -1,104 +1,63 @@
-import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa'; // Import additional icons as needed
+import React from "react";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 import "../css/footer.css";
+
 
 const Footer = () => {
   return (
     <>
-      {/* Footer */}
-      <footer className="text-center text-lg-start text-light">
-        {/* Section: Social media */}
-        <section className="d-flex justify-content-center justify-content-lg-between p-4 ">
-          {/* Left */}
-          <div className="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
-          </div>
-          {/* Right */}
-          <div>
-            <a href="#" className="me-4 " aria-label="Facebook">
-              <FaFacebook />
-            </a>
-            <a href="#" className="me-4 " aria-label="Twitter">
-              <FaTwitter />
-            </a>
-            <a href="#" className="me-4 " aria-label="Instagram">
-              <FaInstagram />
-            </a>
-            <a href="#" className="me-4 " aria-label="LinkedIn">
-              <FaLinkedin />
-            </a>
-            <a href="#" className="me-4 " aria-label="GitHub">
-              <FaGithub />
-            </a>
-          </div>
-        </section>
-        {/* Section: Links */}
-        <section className="">
-          <div className="container text-center text-md-start mt-5">
-            {/* Grid row */}
-            <div className="row mt-3">
-              {/* Grid column */}
-              <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">
-                <i class="bi bi-houses-fill"></i>
-                  HouseOfMathematics
-                </h6>
-                <p className='footer-text'>
-                  Here you can use rows and columns to organize your footer content.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
+      <footer className="footer">
+        <div className="bg-dark py-5 py-xl-8 py-xxl-9 border-top border-light footerr">
+          <div className="container-fluid overflow-hidden">
+            <div className="row gy-5 gy-md-0 align-items-md-center">
+              <div className="col-xs-12 col-md-7 order-1 order-md-0">
+                <div className="copyright text-light text-md-start">
+                  © 2024. All Rights Reserved.
+                </div>
+                <div className="credits text-secondary text-center text-md-start mt-2 fs-8">
+                  <a
+                    href="https://bootstrapbrain.com/"
+                    className="link-secondary text-decoration-none"
+                  >
+                    House Of Mathematics
+                  </a>
+                </div>
               </div>
-              {/* Grid column */}
-              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-                <p>
-                  <a href="#!" className="">Matric Notes</a>
-                </p>
-                <p>
-                  <a href="#!" className="">Intermediate Notes</a>
-                </p>
-                <p>
-                  <a href="#!" className="">O/A Levels</a>
-                </p>
-                <p>
-                  <a href="#!" className="">News</a>
-                </p>
-              </div>
-              {/* Grid column */}
-              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-                <p>
-                  <a href="#!" className="">Pricing</a>
-                </p>
-                <p>
-                  <a href="#!" className="">Settings</a>
-                </p>
-                <p>
-                  <a href="#!" className="">Orders</a>
-                </p>
-                <p>
-                  <a href="#!" className="">Help</a>
-                </p>
-              </div>
-              {/* Grid column */}
-              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 ">
-                <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-                <p className='contact-link'><i className="fas fa-home me-3" /> New York, NY 10012, US</p>
-                <p  className='contact-link'><i className="fas fa-envelope me-3" /> info@example.com</p>
-                <p  className='contact-link'><i className="fas fa-phone me-3" /> + 01 234 567 88</p>
-                <p  className='contact-link'><i className="fas fa-print me-3" /> + 01 234 567 89</p>
+              <div className="col-xs-12 col-md-5 order-0 order-md-1">
+                <div className="social-media-wrapper">
+                  <ul className="list-unstyled m-0 p-0 d-flex justify-content-center justify-content-md-end">
+                    <li className="me-3">
+                      <a href="#!" className="link-light link-opacity-75-hover">
+                        <FaFacebook size={24} />
+                      </a>
+                    </li>
+                    <li className="me-3">
+                      <a href="#!" className="link-light link-opacity-75-hover">
+                        <FaTwitter size={24} />
+                      </a>
+                    </li>
+                    <li className="me-3">
+                      <a href="#!" className="link-light link-opacity-75-hover">
+                        <FaYoutube size={24} />
+                      </a>
+                    </li>
+                    <li className="">
+                      <a href="#!" className="link-light link-opacity-75-hover">
+                        <FaInstagram size={24} />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            {/* Grid row */}
           </div>
-        </section>
-        {/* Copyright */}
-        <div className="text-center p-4">
-          © 2024 Copyright:
-          <a className=" fw-bold" href="https://houseofmathematics.com/"> houseofmathematics.com</a>
         </div>
       </footer>
-      {/* Footer */}
     </>
   );
 };
