@@ -14,8 +14,12 @@ import DetailedServices from "./components/DetailedPages/DetailedServices";
 import DetailedFaculty from "./components/DetailedPages/DetailedFaculty";
 import Preloader from "./components/preloader";
 import DetailedAbout from "./components/DetailedPages/DetailedAbout";
-import Signup from "./components/Signup";
+// import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Parentform from "./SignupForm/Parentform";
+import StudentForm from "./SignupForm/StudentForm";
+import Teacherform from "./SignupForm/Teacherform";
+
 
 const router = createBrowserRouter([
   {
@@ -103,11 +107,31 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/signupForm",
+    path: "/parentsignupform",
     element: (
       <>
         <Navbar />
-        <Signup />
+        <Parentform />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/studentsignupform",
+    element: (
+      <>
+        <Navbar />
+        <StudentForm />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/teachersignupform",
+    element: (
+      <>
+        <Navbar />
+        <Teacherform />
         <Footer />
       </>
     ),

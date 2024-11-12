@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="container-fluid overflow-hidden">
             <div className="row gy-5 gy-md-0 align-items-md-center">
               <div className="col-xs-12 col-md-7 order-1 order-md-0">
-                <div className="copyright text-light text-md-start">
+                <div className="copyright text-light ">
                   © 2024. All Rights Reserved.
                 </div>
                 <div className="credits text-secondary text-center text-md-start mt-2 fs-8">
